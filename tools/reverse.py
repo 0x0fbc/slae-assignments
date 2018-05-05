@@ -16,7 +16,6 @@ output = dict()
 lenmod = strlen % 4
 
 if lenmod != 0:
-    # Lazy...
     pad = lenmod
     if lenmod == 1:
         pad = 3
