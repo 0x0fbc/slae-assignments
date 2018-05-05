@@ -1,0 +1,5 @@
+*.o
+*.pyc
+*.elf
+.gdbhistory
+*.swp
