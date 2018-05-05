@@ -3,3 +3,4 @@
 *.elf
 .gdb_history
 *.swp
+.idea
