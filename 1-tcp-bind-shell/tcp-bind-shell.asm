@@ -32,7 +32,7 @@ _start:
     pop edi             ; EDI is now 0x02
     xchg edi, eax       ; sockfd is now in edi
     xchg ebx, eax       ; EAX now contains 0x00000002 (all but al is zero)
-    mov al, 0x66        ; EAX now contains 0x000000666
+    mov al, 0x66        ; EAX now contains 0x00000066
                         ; This block is because we can't predict the file descriptor returned in EAX and must ensure all of EAX's bytes higher than AL are zeroed.
 
 ; build sockaddr struct on stack
@@ -49,12 +49,12 @@ _start:
 
 ; If we want to bind to a port below 256 we'll need to use an empty register to build the numb
 ;(this is inadvisable, only root can bind to addresses under 1024)
-    ;add dh, 0x05        ; Set up port number in network byte order in a register...
+    ;add dh, 0x05        ; Set up port number in network byte order in an empty register...
     ;push word dx        ; and then PUSH it
     ;xor edx, edx        ; zero EDX again
 
 ; If we wish to use a port number such as 43776, which in hex is AB00, we need to do something similar to the above.
-    ;add dl, 0xAB        ; set up 43776 in network byte order in a register...
+    ;add dl, 0xAB        ; set up 43776 in network byte order in an empty register...
     ;push word dx        ; and then PUSH it
     ;xor edx, edx
 

