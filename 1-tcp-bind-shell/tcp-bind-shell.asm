@@ -94,6 +94,7 @@ _start:
     mov cl, 0x02                ; start at 0x02 (stderr)
 
 dup2_loop:
+    xor eax, eax
     mov al, 0x3f                ; move the syscall into eax
     int 0x80                    ; fire syscall
     dec ecx                     ; decrementing ecx will make it stdout after the first loop and stdin the last
