@@ -78,7 +78,7 @@ _start:
 
 ; accept(int sockfd, null, 0x10)
 ; Accept the first incoming connection to our bound port.
-; Despite what the man pages for accept(2) would have you beleive, this call is not picky about the second two arguments.
+; Despite what the man pages for accept(2) would have you believe, this call is not picky about the second two arguments.
 ; We can just re-use the same arguments from the last call, still in ECX.
     inc ebx
     mov al, 0x66
