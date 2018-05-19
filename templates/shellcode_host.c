@@ -3,7 +3,7 @@
 #include <string.h>
 
 unsigned char shellcode[] = \
-"\x41\x41\x41SHELLCODE_HERE\x41\x41\x41";
+"PASTE_SHELLCODE_HERE";
 
 int main(void) {
     printf("Shellcode length: %d\n", strlen(shellcode));
