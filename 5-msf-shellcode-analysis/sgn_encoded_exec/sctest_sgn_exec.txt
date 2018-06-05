@@ -1,0 +1,452 @@
+graph file sgn_exec.dot
+verbose = 3
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417000
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000000  edx=0x00000000  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fce  ebp=0x00000000  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: 
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417000
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000000  edx=0x00000000  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fce  ebp=0x00000000  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: 
+[emu 0x0x650360 [31;1mdebug[0m ] D9E9                            fldln2 
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417002
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000000  edx=0x00000000  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fce  ebp=0x00000000  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: 
+[emu 0x0x650360 [31;1mdebug[0m ] BA33D47E78                      mov edx,0x787ed433
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417007
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000000  edx=0x787ed433  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fce  ebp=0x00000000  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: 
+[emu 0x0x650360 [31;1mdebug[0m ] D97424F4                        fstenv [esp-0xc]
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x0041700b
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000000  edx=0x787ed433  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fce  ebp=0x00000000  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: 
+[emu 0x0x650360 [31;1mdebug[0m ] 5D                              pop ebp
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x0041700c
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000000  edx=0x787ed433  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417000  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: 
+[emu 0x0x650360 [31;1mdebug[0m ] 2BC9                            sub ecx,ecx
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x0041700e
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000000  edx=0x787ed433  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417000  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: PF ZF 
+[emu 0x0x650360 [31;1mdebug[0m ] B10D                            mov cl,0xd
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417010
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x0000000d  edx=0x787ed433  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417000  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: PF ZF 
+[emu 0x0x650360 [31;1mdebug[0m ] 31551A                          xor [ebp+0x1a],edx
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417013
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x0000000d  edx=0x787ed433  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417000  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: PF 
+[emu 0x0x650360 [31;1mdebug[0m ] 83EDFC                          sub ebp,0xfffffffc
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417016
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x0000000d  edx=0x787ed433  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417004  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF 
+[emu 0x0x650360 [31;1mdebug[0m ] 035516                          add edx,[ebp+0x16]
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417019
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x0000000d  edx=0xd08a3f28  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417004  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: PF SF OF 
+[emu 0x0x650360 [31;1mdebug[0m ] E2F5                            loop 0xfffffff7
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417010
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x0000000c  edx=0xd08a3f28  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417004  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: PF SF OF 
+[emu 0x0x650360 [31;1mdebug[0m ] 31551A                          xor [ebp+0x1a],edx
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417013
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x0000000c  edx=0xd08a3f28  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417004  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: PF 
+[emu 0x0x650360 [31;1mdebug[0m ] 83EDFC                          sub ebp,0xfffffffc
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417016
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x0000000c  edx=0xd08a3f28  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417008  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF 
+[emu 0x0x650360 [31;1mdebug[0m ] 035516                          add edx,[ebp+0x16]
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417019
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x0000000c  edx=0x38f091c1  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417008  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF 
+[emu 0x0x650360 [31;1mdebug[0m ] E2F5                            loop 0xfffffff7
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417010
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x0000000b  edx=0x38f091c1  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417008  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF 
+[emu 0x0x650360 [31;1mdebug[0m ] 31551A                          xor [ebp+0x1a],edx
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417013
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x0000000b  edx=0x38f091c1  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417008  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: PF SF 
+[emu 0x0x650360 [31;1mdebug[0m ] 83EDFC                          sub ebp,0xfffffffc
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417016
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x0000000b  edx=0x38f091c1  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x0041700c  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF PF 
+[emu 0x0x650360 [31;1mdebug[0m ] 035516                          add edx,[ebp+0x16]
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417019
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x0000000b  edx=0x2079f4ee  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x0041700c  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF PF 
+[emu 0x0x650360 [31;1mdebug[0m ] E2F5                            loop 0xfffffff7
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417010
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x0000000a  edx=0x2079f4ee  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x0041700c  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF PF 
+[emu 0x0x650360 [31;1mdebug[0m ] 31551A                          xor [ebp+0x1a],edx
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417013
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x0000000a  edx=0x2079f4ee  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x0041700c  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: 
+[emu 0x0x650360 [31;1mdebug[0m ] 83EDFC                          sub ebp,0xfffffffc
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417016
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x0000000a  edx=0x2079f4ee  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417010  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF 
+[emu 0x0x650360 [31;1mdebug[0m ] 035516                          add edx,[ebp+0x16]
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417019
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x0000000a  edx=0x88ed2456  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417010  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: PF SF OF 
+[emu 0x0x650360 [31;1mdebug[0m ] E2F5                            loop 0xfffffff7
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417010
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000009  edx=0x88ed2456  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417010  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: PF SF OF 
+[emu 0x0x650360 [31;1mdebug[0m ] 31551A                          xor [ebp+0x1a],edx
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417013
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000009  edx=0x88ed2456  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417010  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: PF 
+[emu 0x0x650360 [31;1mdebug[0m ] 83EDFC                          sub ebp,0xfffffffc
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417016
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000009  edx=0x88ed2456  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417014  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF PF 
+[emu 0x0x650360 [31;1mdebug[0m ] 035516                          add edx,[ebp+0x16]
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417019
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000009  edx=0xeb1c8c56  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417014  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: PF SF 
+[emu 0x0x650360 [31;1mdebug[0m ] E2F5                            loop 0xfffffff7
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417010
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000008  edx=0xeb1c8c56  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417014  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: PF SF 
+[emu 0x0x650360 [31;1mdebug[0m ] 31551A                          xor [ebp+0x1a],edx
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417013
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000008  edx=0xeb1c8c56  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417014  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: PF SF 
+[emu 0x0x650360 [31;1mdebug[0m ] 83EDFC                          sub ebp,0xfffffffc
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417016
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000008  edx=0xeb1c8c56  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417018  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF PF 
+[emu 0x0x650360 [31;1mdebug[0m ] 035516                          add edx,[ebp+0x16]
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417019
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000008  edx=0xcea5fabf  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417018  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF SF 
+[emu 0x0x650360 [31;1mdebug[0m ] E2F5                            loop 0xfffffff7
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417010
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000007  edx=0xcea5fabf  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417018  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF SF 
+[emu 0x0x650360 [31;1mdebug[0m ] 31551A                          xor [ebp+0x1a],edx
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417013
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000007  edx=0xcea5fabf  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417018  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: 
+[emu 0x0x650360 [31;1mdebug[0m ] 83EDFC                          sub ebp,0xfffffffc
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417016
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000007  edx=0xcea5fabf  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x0041701c  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF 
+[emu 0x0x650360 [31;1mdebug[0m ] 035516                          add edx,[ebp+0x16]
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417019
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000007  edx=0xceb6e311  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x0041701c  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: PF SF 
+[emu 0x0x650360 [31;1mdebug[0m ] E2F5                            loop 0xfffffff7
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417010
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000006  edx=0xceb6e311  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x0041701c  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: PF SF 
+[emu 0x0x650360 [31;1mdebug[0m ] 31551A                          xor [ebp+0x1a],edx
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417013
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000006  edx=0xceb6e311  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x0041701c  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: PF 
+[emu 0x0x650360 [31;1mdebug[0m ] 83EDFC                          sub ebp,0xfffffffc
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417016
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000006  edx=0xceb6e311  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417020  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF 
+[emu 0x0x650360 [31;1mdebug[0m ] 035516                          add edx,[ebp+0x16]
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417019
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000006  edx=0x3019e311  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417020  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF PF 
+[emu 0x0x650360 [31;1mdebug[0m ] E2F5                            loop 0xfffffff7
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417010
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000005  edx=0x3019e311  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417020  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF PF 
+[emu 0x0x650360 [31;1mdebug[0m ] 31551A                          xor [ebp+0x1a],edx
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417013
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000005  edx=0x3019e311  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417020  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: PF 
+[emu 0x0x650360 [31;1mdebug[0m ] 83EDFC                          sub ebp,0xfffffffc
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417016
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000005  edx=0x3019e311  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417024  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF PF 
+[emu 0x0x650360 [31;1mdebug[0m ] 035516                          add edx,[ebp+0x16]
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417019
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000005  edx=0x95490385  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417024  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: SF OF 
+[emu 0x0x650360 [31;1mdebug[0m ] E2F5                            loop 0xfffffff7
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417010
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000004  edx=0x95490385  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417024  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: SF OF 
+[emu 0x0x650360 [31;1mdebug[0m ] 31551A                          xor [ebp+0x1a],edx
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417013
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000004  edx=0x95490385  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417024  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: PF 
+[emu 0x0x650360 [31;1mdebug[0m ] 83EDFC                          sub ebp,0xfffffffc
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417016
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000004  edx=0x95490385  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417028  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF PF 
+[emu 0x0x650360 [31;1mdebug[0m ] 035516                          add edx,[ebp+0x16]
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417019
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000004  edx=0x057866f9  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417028  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF PF 
+[emu 0x0x650360 [31;1mdebug[0m ] E2F5                            loop 0xfffffff7
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417010
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000003  edx=0x057866f9  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417028  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF PF 
+[emu 0x0x650360 [31;1mdebug[0m ] 31551A                          xor [ebp+0x1a],edx
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417013
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000003  edx=0x057866f9  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417028  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: 
+[emu 0x0x650360 [31;1mdebug[0m ] 83EDFC                          sub ebp,0xfffffffc
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417016
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000003  edx=0x057866f9  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x0041702c  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF 
+[emu 0x0x650360 [31;1mdebug[0m ] 035516                          add edx,[ebp+0x16]
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417019
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000003  edx=0x7cebda5a  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x0041702c  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: PF 
+[emu 0x0x650360 [31;1mdebug[0m ] E2F5                            loop 0xfffffff7
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417010
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000002  edx=0x7cebda5a  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x0041702c  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: PF 
+[emu 0x0x650360 [31;1mdebug[0m ] 31551A                          xor [ebp+0x1a],edx
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417013
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000002  edx=0x7cebda5a  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x0041702c  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: 
+[emu 0x0x650360 [31;1mdebug[0m ] 83EDFC                          sub ebp,0xfffffffc
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417016
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000002  edx=0x7cebda5a  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417030  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF PF 
+[emu 0x0x650360 [31;1mdebug[0m ] 035516                          add edx,[ebp+0x16]
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417019
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000002  edx=0xd042dabe  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417030  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: PF SF OF 
+[emu 0x0x650360 [31;1mdebug[0m ] E2F5                            loop 0xfffffff7
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417010
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000001  edx=0xd042dabe  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417030  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: PF SF OF 
+[emu 0x0x650360 [31;1mdebug[0m ] 31551A                          xor [ebp+0x1a],edx
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417013
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000001  edx=0xd042dabe  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417030  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: SF 
+[emu 0x0x650360 [31;1mdebug[0m ] 83EDFC                          sub ebp,0xfffffffc
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417016
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000001  edx=0xd042dabe  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417034  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF 
+[emu 0x0x650360 [31;1mdebug[0m ] 035516                          add edx,[ebp+0x16]
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417019
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000001  edx=0x5110bc47  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417034  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF PF OF 
+[emu 0x0x650360 [31;1mdebug[0m ] E2F5                            loop 0xfffffff7
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x0041701b
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000000  edx=0x5110bc47  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417034  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF PF OF 
+[emu 0x0x650360 [31;1mdebug[0m ] 6A0B                            push byte 0xb
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x0041701d
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x00000000  ecx=0x00000000  edx=0x5110bc47  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fce  ebp=0x00417034  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF PF OF 
+[emu 0x0x650360 [31;1mdebug[0m ] 58                              pop eax
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x0041701e
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x0000000b  ecx=0x00000000  edx=0x5110bc47  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417034  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF PF OF 
+[emu 0x0x650360 [31;1mdebug[0m ] 99                              cwd 
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x0041701f
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x0000000b  ecx=0x00000000  edx=0x00000000  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fd2  ebp=0x00417034  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF PF OF 
+[emu 0x0x650360 [31;1mdebug[0m ] 52                              push edx
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417020
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x0000000b  ecx=0x00000000  edx=0x00000000  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fce  ebp=0x00417034  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF PF OF 
+[emu 0x0x650360 [31;1mdebug[0m ] 66682D63                        push word 0x632d
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417024
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x0000000b  ecx=0x00000000  edx=0x00000000  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fcc  ebp=0x00417034  esi=0x00000000  edi=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF PF OF 
+[emu 0x0x650360 [31;1mdebug[0m ] 89E7                            mov edi,esp
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417026
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x0000000b  ecx=0x00000000  edx=0x00000000  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fcc  ebp=0x00417034  esi=0x00000000  edi=0x00416fcc
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF PF OF 
+[emu 0x0x650360 [31;1mdebug[0m ] 682F736800                      push dword 0x68732f
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x0041702b
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x0000000b  ecx=0x00000000  edx=0x00000000  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fc8  ebp=0x00417034  esi=0x00000000  edi=0x00416fcc
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF PF OF 
+[emu 0x0x650360 [31;1mdebug[0m ] 682F62696E                      push dword 0x6e69622f
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417030
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x0000000b  ecx=0x00000000  edx=0x00000000  ebx=0x00000000
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fc4  ebp=0x00417034  esi=0x00000000  edi=0x00416fcc
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF PF OF 
+[emu 0x0x650360 [31;1mdebug[0m ] 89E3                            mov ebx,esp
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417032
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x0000000b  ecx=0x00000000  edx=0x00000000  ebx=0x00416fc4
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fc4  ebp=0x00417034  esi=0x00000000  edi=0x00416fcc
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF PF OF 
+[emu 0x0x650360 [31;1mdebug[0m ] 52                              push edx
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417033
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x0000000b  ecx=0x00000000  edx=0x00000000  ebx=0x00416fc4
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fc0  ebp=0x00417034  esi=0x00000000  edi=0x00416fcc
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF PF OF 
+[emu 0x0x650360 [31;1mdebug[0m ] E810000000                      call 0x15
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417048
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x0000000b  ecx=0x00000000  edx=0x00000000  ebx=0x00416fc4
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fbc  ebp=0x00417034  esi=0x00000000  edi=0x00416fcc
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF PF OF 
+[emu 0x0x650360 [31;1mdebug[0m ] 57                              push edi
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417049
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x0000000b  ecx=0x00000000  edx=0x00000000  ebx=0x00416fc4
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fb8  ebp=0x00417034  esi=0x00000000  edi=0x00416fcc
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF PF OF 
+[emu 0x0x650360 [31;1mdebug[0m ] 53                              push ebx
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x0041704a
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x0000000b  ecx=0x00000000  edx=0x00000000  ebx=0x00416fc4
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fb4  ebp=0x00417034  esi=0x00000000  edi=0x00416fcc
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF PF OF 
+[emu 0x0x650360 [31;1mdebug[0m ] 89E1                            mov ecx,esp
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x0041704c
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x0000000b  ecx=0x00416fb4  edx=0x00000000  ebx=0x00416fc4
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fb4  ebp=0x00417034  esi=0x00000000  edi=0x00416fcc
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF PF OF 
+[emu 0x0x650360 [31;1mdebug[0m ] CD80                            int 0x80
+execve
+int execve (const char *dateiname=00416fc4={/bin/sh}, const char * argv[], const char *envp[]);
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x0041704e
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x0000000b  ecx=0x00416fb4  edx=0x00000000  ebx=0x00416fc4
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fb4  ebp=0x00417034  esi=0x00000000  edi=0x00416fcc
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF PF OF 
+[emu 0x0x650360 [31;1mdebug[0m ] 0000                            add [eax],al
+cpu error error accessing 0x00000004 not mapped
+
+stepcount 73
+copying vertexes
+optimizing graph
+vertex 0x6e0ab0
+going forwards from 0x6e0ab0
+ -> vertex 0x6e09d0
+ -> vertex 0x6e0c60
+ -> vertex 0x6e0f40
+ -> vertex 0x6e1220
+ -> vertex 0x6e1640
+copying edges for 0x6e1640
+ -> 0x6e5cc0
+vertex 0x6e17b0
+going forwards from 0x6e17b0
+copying edges for 0x6e17b0
+ -> 0x6e5940
+vertex 0x6e1a60
+going forwards from 0x6e1a60
+ -> vertex 0x6e1d40
+copying edges for 0x6e1d40
+ -> 0x6e5080
+vertex 0x6e2020
+going forwards from 0x6e2020
+copying edges for 0x6e2020
+ -> 0x6e5cc0
+ -> 0x6e21f0
+vertex 0x6e2d80
+going forwards from 0x6e2d80
+ -> vertex 0x6e2c30
+ -> vertex 0x6e6120
+ -> vertex 0x6e6270
+ -> vertex 0x6e63c0
+ -> vertex 0x6e6510
+ -> vertex 0x6e25e0
+ -> vertex 0x6e68b0
+ -> vertex 0x6e6b90
+ -> vertex 0x6e2470
+ -> vertex 0x6e7110
+ -> vertex 0x6e7380
+ -> vertex 0x6e75f0
+ -> vertex 0x6e7860
+copying edges for 0x6e7860
+ -> 0x6e4c00
+vertex 0x6e58d0
+going forwards from 0x6e58d0
+copying edges for 0x6e58d0
+vertex 0x6e3950
+going forwards from 0x6e3950
+copying edges for 0x6e3950
+[emu 0x0x650360 [31;1mdebug[0m ] cpu state    eip=0x00417050
+[emu 0x0x650360 [31;1mdebug[0m ] eax=0x0000000b  ecx=0x00416fb4  edx=0x00000000  ebx=0x00416fc4
+[emu 0x0x650360 [31;1mdebug[0m ] esp=0x00416fb4  ebp=0x00417034  esi=0x00000000  edi=0x00416fcc
+[emu 0x0x650360 [31;1mdebug[0m ] Flags: CF PF OF 
+int execve (
+     const char * dateiname = 0x00416fc4 => 
+           = "/bin/sh";
+     const char * argv[] = [
+           = 0x00416fb4 => 
+               = 0x00416fc4 => 
+                   = "/bin/sh";
+           = 0x00416fb8 => 
+               = 0x00416fcc => 
+                   = "-c";
+           = 0x00416fbc => 
+               = 0x00417038 => 
+                   = "cat /etc/passwd";
+           = 0x00000000 => 
+             none;
+     ];
+     const char * envp[] = 0x00000000 => 
+         none;
+) =  0;
