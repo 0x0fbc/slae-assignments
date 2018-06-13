@@ -1,7 +1,7 @@
 
 ## Introduction
 
-This script accepts a shellcode payload, encrypts it using libsodium's secret box (chacha20/poly1305) and generates a C source file that includes key, nonce, and ciphertext material is compiled and staticially linked to glibc and libsodium. The resulting executable should run on most 32 bit linux systems.
+This script accepts a shellcode payload, encrypts it using libsodium's secret box (chacha20/poly1305) and generates a C source file that includes key, nonce, and ciphertext material is compiled and statically linked to glibc and libsodium. The resulting executable should run on most 32 bit linux systems.
 
 ## Requirements
 
