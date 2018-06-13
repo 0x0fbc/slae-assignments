@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
 Custom libsodium crypter; generates a C source file with an encrypted
-shellcode embedded in it. The C is compiled and staticially linked to DJB's 
-public domain Networking and Cryptography Library (NaCl). The program 
-decrypts and passes execution to the embedded shellcode. 
+shellcode embedded in it. The C is compiled and statically linked to DJB's
+public domain Networking and Cryptography Library (NaCl) and to glibc. The program
+decrypts and passes execution to the embedded shellcode.
 Usage: this_script.py <destination filename> <hex_escaped_shellcode_to_crypt>
 Author: fbcsec
 This code was written to fulfill the requirements of the SecurityTube Linux Assembly Expert course:
@@ -98,9 +98,9 @@ def main():
     input_shellcode = process_shellcode(sys.argv[2])
 
     key = nacl.utils.random(nacl.secret.SecretBox.KEY_SIZE)  # Generate random key
-    
+
     encrypted = nacl.secret.SecretBox(key).encrypt(input_shellcode)  # Encrypt shellcode
-    
+
     nonce = encrypted.nonce  # Extract nonce from EncryptedMessage object
     ciphertext = encrypted.ciphertext  # Extract ciphertext from EncryptedMessage object
 
@@ -117,6 +117,7 @@ def main():
                      output_filename + '.elf', '-ggdb', '-static', '-pthread', '-lpthread', '/usr/lib/i386-linux-gnu/libsodium.a'])
     #os.remove(output_filename + '.c')
     print('Finished %s' % output_filename + '.elf')
+
 
 if __name__ == '__main__':
     main()
