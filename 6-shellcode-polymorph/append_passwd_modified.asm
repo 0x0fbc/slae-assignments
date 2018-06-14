@@ -1,6 +1,10 @@
 ; Modified 'append /etc/passwd & exit()' by fbcsec. Original by $andman
 ; The user t00r with uid 0 and an empty password is appended to the end of /etc/passwd.
 ; Original: http://shell-storm.org/shellcode/files/shellcode-561.php
+; This code was written to fulfill the requirements of the SecurityTube Linux Assembly Expert course:
+; http://www.securitytube-training.com/online-courses/securitytube-linux-assembly-expert/index.html
+; Student ID: SLAE - 1187
+
 
 global _start
 

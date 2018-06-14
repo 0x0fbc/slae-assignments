@@ -1,3 +1,9 @@
+; x86 access() egghunter demo
+; Author: fbcsec
+; This code was written to fulfill the requirements of the SecurityTube Linux Assembly Expert course:
+; http://www.securitytube-training.com/online-courses/securitytube-linux-assembly-expert/index.html
+; Student ID: SLAE - 1187
+
 global _start
 
 section .text

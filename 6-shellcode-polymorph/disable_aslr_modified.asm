@@ -1,6 +1,9 @@
 ; Modified ASLR deactivation shellcode by fbcsec
 ; Original by Jean Pascal Pereira
 ; Original: http://shell-storm.org/shellcode/files/shellcode-813.php
+; This code was written to fulfill the requirements of the SecurityTube Linux Assembly Expert course:
+; http://www.securitytube-training.com/online-courses/securitytube-linux-assembly-expert/index.html
+; Student ID: SLAE - 1187
 
 global _start
 
